@@ -8,8 +8,8 @@ class Chatbot:
 
     template = """
     Based on: {retrieved_docs}
-    Question: {user_question}
-    Chat history: {chat_history}
+    Answer the question: {user_question}
+    Considering chat history: {chat_history}
     """
 
     def answer_question(self, user_query:str, history: list[dict[str, str]]):

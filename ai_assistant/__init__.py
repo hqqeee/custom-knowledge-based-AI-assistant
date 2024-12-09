@@ -1,5 +1,6 @@
 import os
 
+from langchain_core.language_models import BaseChatModel
 from langchain_core.vectorstores import VectorStore
 from langchain_milvus import Milvus
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
@@ -20,7 +21,7 @@ def init_vector_store():
 vector_store: VectorStore = init_vector_store()
 
 
-model = ChatOpenAI(
+model: BaseChatModel = ChatOpenAI(
     model = config.chat_model('model'),
     temperature = config.chat_model('temperature'),
     max_tokens = config.chat_model('max_tokens')
