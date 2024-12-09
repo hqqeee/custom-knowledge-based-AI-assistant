@@ -1,0 +1,17 @@
+embedding:
+  model: 'text-embedding-3-small'
+  api-key: '<your-open-ai-key>'
+
+milvus:
+  uri: './db/milvus.db'
+  collection: 'articles'
+
+chat-model:
+  model: 'gpt-4o-mini'
+  temperature: 0.5
+  max_tokens: 400
+
+loader:
+  chunk_size: 200
+  chunk_overlap: 20
+
